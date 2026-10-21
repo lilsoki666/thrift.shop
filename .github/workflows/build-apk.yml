@@ -48,6 +48,11 @@ jobs:
             "Cython==0.29.33" \
             "buildozer==1.5.0"
 
+      - name: Pin pip for Android build
+        run: |
+          echo "pip<26" > constraints.txt
+          echo "PIP_CONSTRAINT=$GITHUB_WORKSPACE/constraints.txt" >> $GITHUB_ENV
+
       - name: Check Python syntax
         run: python -m py_compile main.py
 
