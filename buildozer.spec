@@ -20,6 +20,7 @@ fullscreen = 1
 android.accept_sdk_license = True
 android.minapi = 24
 android.api = 35
+android.ndk = 25b
 
 [buildozer]
 
