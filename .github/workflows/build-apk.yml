@@ -58,7 +58,7 @@ jobs:
 
       - name: Build Android APK
         run: |
-          set -o pipefail
+          buildozer android clean
           yes | buildozer android debug
         env:
           P4A_RELEASE: "0"
