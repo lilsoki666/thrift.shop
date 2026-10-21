@@ -58,8 +58,8 @@ jobs:
 
       - name: Build Android APK
         run: |
-          buildozer android clean
-          yes | buildozer android debug
+          set -e
+          yes | buildozer -v android debug
         env:
           P4A_RELEASE: "0"
 
